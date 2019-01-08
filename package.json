@@ -1,0 +1,52 @@
+{
+  "author": {
+    "email": "gdibble@gmail.com",
+    "name": "Gabriel Dibble"
+  },
+  "bugs": {
+    "url": "https://github.com/firstclass/ampersand-bootstrap-multiselect-view/issues"
+  },
+  "dependencies": {
+    "ampersand-select-view": "^8.0.0",
+    "ampersand-state": "^4.8.0",
+    "bootstrap-multiselect": "^0.9.13-1"
+  },
+  "description": "Ampersand view implementing the bootstrap-multiselect for Bootstrap 3",
+  "devDependencies": {
+    "beefy": "^2.1.1",
+    "browserify": "^6.1.0",
+    "function-bind": "^1.0.2",
+    "hapi": "^7.1.0",
+    "precommit-hook": "^1.0.7",
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.1",
+    "tape-run": "^0.3.0"
+  },
+  "homepage": "https://github.com/firstclass/ampersand-bootstrap-multiselect-view",
+  "keywords": [
+    "ampersand",
+    "input",
+    "select",
+    "multiselect",
+    "multi-select"
+  ],
+  "main": "ampersand-bootstrap-multiselect-view.js",
+  "maintainers": [
+    {
+      "name": "gdibble",
+      "email": "gdibble@gmail.com"
+    }
+  ],
+  "name": "ampersand-bootstrap-multiselect-view",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/firstclass/ampersand-bootstrap-multiselect-view.git"
+  },
+  "scripts": {
+    "start": "beefy test/visual-test.js 8081 --open",
+    "test": "browserify test/index.js | tape-run | tap-spec",
+    "test-server": "node test/test-server.js"
+  },
+  "version": "0.0.1"
+}
