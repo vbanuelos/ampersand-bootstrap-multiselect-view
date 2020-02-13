@@ -1,1 +1,1 @@
-# ampersand-bootstrap-tagsinput-view
+# ampersand-bootstrap-multiselect-view
