@@ -22,11 +22,12 @@ module.exports = SelectView.extend({
   },
   render: function () {
     SelectView.prototype.render.call(this);
-    if (this.select && [ true, 'multiple' ].indexOf(this.multiple) > -1) {
-      this.select.setAttribute('multiple', 'multiple');
-    }
     this.preRenderBsPluginCb();
     $(this.select).multiselect(this.bsMultiselectOptions);
+    if (this.select && [ true, 'multiple' ].indexOf(this.multiple) > -1) {
+      this.select.setAttribute('multiple', 'multiple');
+      $(this.select).multiselect('rebuild');
+    }
     return this;
   },
   updateSelectedOption: function () {
