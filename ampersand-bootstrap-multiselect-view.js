@@ -26,6 +26,7 @@ module.exports = SelectView.extend({
     $(this.select).multiselect(this.bsMultiselectOptions);
     if (this.select && [ true, 'multiple' ].indexOf(this.multiple) > -1) {
       this.select.setAttribute('multiple', 'multiple');
+      if (this.selectAll) { $(this.select).multiselect('selectAll', false); }
       $(this.select).multiselect('rebuild');
     }
     return this;
