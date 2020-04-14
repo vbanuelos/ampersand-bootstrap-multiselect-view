@@ -21,6 +21,7 @@ module.exports = SelectView.extend({
     SelectView.prototype.initialize.call(this, spec);
   },
   render: function () {
+    var self = this;
     SelectView.prototype.render.call(this);
     this.preRenderBsPluginCb();
     $(this.select).multiselect(this.bsMultiselectOptions);
