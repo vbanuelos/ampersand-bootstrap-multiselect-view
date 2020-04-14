@@ -28,6 +28,14 @@ module.exports = SelectView.extend({
       this.select.setAttribute('multiple', 'multiple');
       if (this.selectAll) { $(this.select).multiselect('selectAll', false); }
       $(this.select).multiselect('rebuild');
+
+      if (this.selectNone) {
+        //Allow the 'ampersand-select-view' first option if none select code to run before deselecting all
+        setTimeout(function () {
+          $(self.select).multiselect('deselectAll', false)
+          $(self.select).multiselect('rebuild');
+        }, 0);
+      }
     }
     return this;
   },
