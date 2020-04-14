@@ -48,5 +48,5 @@
     "test": "browserify test/index.js | tape-run | tap-spec",
     "test-server": "node test/test-server.js"
   },
-  "version": "1.2.0"
+  "version": "1.2.1"
 }
