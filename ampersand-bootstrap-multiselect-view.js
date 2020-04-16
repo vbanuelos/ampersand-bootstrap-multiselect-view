@@ -35,7 +35,7 @@ module.exports = SelectView.extend({
         setTimeout(function () {
           $(self.select).multiselect('deselectAll', false)
           $(self.select).multiselect('rebuild');
-          $(self.select).multiselect('toggle');
+          if (this.toggleOpenOnRender) { $(self.select).multiselect('toggle'); }
         }, 0);
       } else if (this.toggleOpenOnRender) {
         //Allow the 'ampersand-select-view' to render before toggling opening
